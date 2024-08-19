@@ -1,4 +1,5 @@
 import React, { useRef, useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination'; // Ensure pagination styles are imported
@@ -6,13 +7,19 @@ import './Welcome.css';
 
 const Welcome = () => {
     const swiperRef = useRef(null);
+    const navigate = useNavigate();
     const [isLastSlide, setIsLastSlide] = useState(false);
     const [currentSlide, setCurrentSlide] = useState(1);
     const [totalSlides, setTotalSlides] = useState(0);
 
     const handleNext = () => {
         if (swiperRef.current && swiperRef.current.swiper) {
-            swiperRef.current.swiper.slideNext();
+            const swiper = swiperRef.current.swiper;
+            if (swiper.activeIndex === swiper.slides.length - 1) {
+                navigate('/home');
+            } else {
+                swiper.slideNext();
+            }
         }
     };
 
