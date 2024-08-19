@@ -23,8 +23,10 @@
 }
 .home-simulate, .home-flavor, .home-predict{
     background-color: #A38675;
-    margin-bottom: 1em;
+    margin-bottom: .5em;
     color: white;
+    font-size: 24px;
+    border-radius: 20px;
 }
 
 /* Media query for viewport widths of 325px and below */

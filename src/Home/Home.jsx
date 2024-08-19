@@ -12,9 +12,9 @@ const Welcome = () => {
 
             <div className = "home-container">
                 <div className='home-button'>
-                    <button className = 'home-simulate'>Simulate </button>
-                    <button className = 'home-flavor'>Recommend </button>
-                    <button className = 'home-predict'>Predict</button>
+                    <button className = 'home-simulate'>Simulate Beverages </button>
+                    <button className = 'home-flavor'>Recommend Flavors</button>
+                    <button className = 'home-predict'>Predict Costs</button>
                 </div>
             </div>
         </div>
