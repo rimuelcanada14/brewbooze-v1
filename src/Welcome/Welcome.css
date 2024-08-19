@@ -1,0 +1,187 @@
+/* Welcome.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('/MainBG.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    font-family: 'Poppins';
+}
+
+.welcome-page {
+    width: 100vw; /* Full viewport width */
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Prevent overflow */
+}
+
+.welcome-slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: transparent; /* Remove background */
+    border-radius: 0; /* Remove rounded corners */
+    box-shadow: none; /* Remove shadow */
+}
+
+.welcome-title {
+    font-size: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-weight: bold;
+    color: #054243;
+}
+
+.welcome-content {
+    margin-top: -1em;
+    padding-left: 15px;
+    padding-right: 15px;
+    color: black;
+}
+
+.simulate-text {
+    position: fixed;
+    top: 3%;
+}
+
+.barista-image {
+    width: auto;
+    height: 31.5em;
+    margin-top: 45%;
+    margin-bottom: -1.7em;  
+}
+
+.button-container {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+    padding: 20px;
+    margin-left: 1em;
+    margin-right: 1em;
+    bottom: 1.7%;
+}
+
+.back-button {
+    width: 88%;
+    background-color: white;
+    border: none;
+    color: #7e604f;
+    font-weight: 200;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+                0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-right: .5em;
+    font-weight: 400;
+}
+
+.next2-button {
+    width: 88%;
+    color: white;
+    border: none;
+    background-color: #A38675;
+    font-weight: 200;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+                0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-left: .5em;
+    font-weight: 400;
+}
+
+.next-button {
+    position: fixed;
+    margin-left: .5em;
+    width: 88%;
+    background-color: #A38675;
+    border: none;
+    color: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+                0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    font-weight: 400;
+    bottom: 4%;
+}
+
+.skip-button {
+    position: fixed;
+    top: 1%;
+    right: 1%;
+    background-color: transparent;
+    color: #A38675;
+    z-index: 10;
+    border: none;
+}
+
+.flavor-page {
+    margin-top: 1em;
+}
+
+.flavor-image {
+    width: auto;
+    height: 24em;
+    margin-top: 35%;
+    margin-bottom: -1.7em;  
+}
+
+.business-image {
+    width: auto;
+    height: 18em;
+    margin-top: 35%;
+    margin-bottom: -1.9em;  
+}
+
+/* Pagination Dots */
+.swiper-container {
+    width: 100%; /* Ensure Swiper container takes full width */
+    height: 100%; /* Ensure Swiper container takes full height */
+}
+
+.swiper-pagination {
+    position: absolute; /* Absolute positioning for pagination dots */
+    top: 10px; /* Distance from the top */
+    left: 10px; /* Distance from the left */
+    text-align: center; /* Center bullets horizontally */
+}
+
+.swiper-pagination-bullet {
+    background: rgba(255, 255, 255, 0.7); /* Default bullet color */
+    width: 12px; /* Bullet size */
+    height: 12px; /* Bullet size */
+    border-radius: 50%; /* Circle shape */
+    display: inline-block; /* Ensure bullets are displayed inline */
+    margin: 0 4px; /* Space between bullets */
+}
+
+.swiper-pagination-bullet-active {
+    background: #ffffff; /* Active bullet color */
+}
+.slide-number{
+    position: fixed;
+    top: 2.3%;
+    left: 5%;
+    background-color: transparent;
+    color: #A38675;
+    z-index: 10;
+    border: none;
+}
+@media (min-width: 527px) {
+    .barista-image {
+        width: auto;
+        height: 45em;
+        margin-top: 25%;
+        margin-bottom: -1.7em;  
+    }
+}
