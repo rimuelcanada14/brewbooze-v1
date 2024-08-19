@@ -1,0 +1,28 @@
+.header {
+    position: fixed;
+    padding-top: 0.1em;
+    width: 100%;
+    top: 0; 
+    color: white;
+    background-color: #A5A58D;
+    background-size: cover;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    z-index: 100;
+    width: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 5px;
+    margin-left: auto;
+    
+}
+.header-line{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header-line h5{
+    margin: 10px;
+    font-weight: 600;
+    font-size: 24px;
+}

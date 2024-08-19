@@ -1,0 +1,41 @@
+.home-page {
+    width: 100vw; /* Full viewport width */
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    overflow: hidden; /* Prevent overflow */
+}
+.home-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%; 
+    height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; 
+}
+.home-button{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+}
+.home-simulate, .home-flavor, .home-predict{
+    background-color: #A38675;
+    margin-bottom: 1em;
+    color: white;
+}
+
+/* Media query for viewport widths of 325px and below */
+@media (max-width: 325px) {
+    .home-page {
+        /* Adjust any styles needed for smaller screens */
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: left;
+        align-items: left;
+        overflow: hidden;
+    }
+}
