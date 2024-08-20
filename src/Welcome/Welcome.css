@@ -103,8 +103,7 @@ body {
 
 .next-button {
     position: fixed;
-    margin-left: .5em;
-    width: 88%;
+    width: 95%;
     background-color: #A38675;
     border: none;
     color: white;
