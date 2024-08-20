@@ -1,8 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Header from '../components/Header';
+import { useNavigate } from 'react-router-dom';
 import './Simulator.css'
 
 const Choose = () => {
+    const navigate = useNavigate();
+
     return (
         <div className='choose-page'>
             <div>
@@ -11,7 +14,7 @@ const Choose = () => {
 
             <div className="choose-container">
                 <div className='choose-button'>
-                    <button className = 'choose-option'>
+                    <button className = 'choose-option' onClick={() => navigate('/coffee-opt')}>
                         <div>
                             <img src='./Coffee.png' alt='Flavor' className='coffee-image' />
                         </div>
