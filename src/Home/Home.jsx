@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
 import './Home.css';
 
-const Welcome = () => {
+const Home = () => {
     const [activeIndex, setActiveIndex] = useState(null);
+    const navigate = useNavigate();
 
     const toggleAccordion = (index) => {
         const newIndex = activeIndex === index ? null : index;
@@ -40,8 +42,8 @@ const Welcome = () => {
                         </button>
                         {activeIndex === 0 && (
                             <div className="accordion-content">
-                                <p>Simulation of cocktails and coffee beverages will be shown with the ingredients integrated with it.</p>
-                                <button className="accordion-inner-button">Start Simulation</button>
+                                <p>Simulation of cocktails and coffee beverages will be shown with the ingredients integrated with it!</p>
+                                <button className="accordion-inner-button" onClick={() => navigate('/choose')}>Start Simulation</button>
                             </div>
                         )}
                     </div>
@@ -51,7 +53,8 @@ const Welcome = () => {
                         </button>
                         {activeIndex === 1 && (
                             <div className="accordion-content">
-                                <p>Content for Recommend Flavors</p>
+                                <p>With the help of GPT OpenAI, BrewBooze can help you in finding the best flavor of beverage 
+                                    based on your preferences!</p>
                                 <button className="accordion-inner-button">Get Recommendations</button>
                             </div>
                         )}
@@ -62,7 +65,7 @@ const Welcome = () => {
                         </button>
                         {activeIndex === 2 && (
                             <div className="accordion-content">
-                                <p>Content for Predict Costs</p>
+                                <p>BrewBooze will provide a breakdown of costs in starting your own café to make you prepared for its future!</p>
                                 <button className="accordion-inner-button">Calculate Costs</button>
                             </div>
                         )}
@@ -73,4 +76,4 @@ const Welcome = () => {
     );
 };
 
-export default Welcome;
+export default Home;

@@ -26,7 +26,7 @@
 .accordion-item {
     margin-bottom: 1em; 
     overflow: hidden;
-    transition: max-height 1s ease-in-out;
+    transition: max-height 0.3s ease-in-out;
     max-height: 9em; 
     border-radius: 20px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
@@ -42,6 +42,7 @@
 .accordion-button {
     background-color: #A38675;
     color: white;
+    font-weight: 600;
     font-size: 24px;
     border-radius: 20px 20px 0 0; 
     width: 100%;
@@ -69,17 +70,19 @@
 }
 
 .accordion-inner-button {
+    width: 100%;
     margin-top: 1em;
     padding: 0.5em 1em;
     background-color: #A5A58D;
     color: white;
     font-size: 18px;
     border: none;
-    border-radius: 10px;
+    border-radius: 15px;
     cursor: pointer;
     transition: background-color 0.3s ease;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
                 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    font-weight: 400;
 }
 
 
