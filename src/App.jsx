@@ -4,6 +4,7 @@ import Welcome from './Welcome/Welcome';
 import Home from './Home/Home';
 import Choose from './Simulator/Choose';
 import CoffeeOptions from './Simulator/CoffeeOptions';
+import CocktailOptions from './Simulator/CocktailOptions';
 
 const App = () => {
     return (
@@ -13,6 +14,7 @@ const App = () => {
                 <Route path="home" element={<Home />} />
                 <Route path="choose" element={<Choose />} />
                 <Route path="coffee-opt" element={<CoffeeOptions />} />
+                <Route path="cocktail-opt" element={<CocktailOptions />} />
             </Routes>
         </Router>
     );

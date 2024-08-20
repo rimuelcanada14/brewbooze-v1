@@ -2,7 +2,7 @@ import React from 'react';
 import Header from '../components/Header';
 import './Simulator.css'
 
-const CoffeeOptions = () => {
+const CocktailOptions = () => {
     return (
         <div className='choose-page'>
             <div>
@@ -15,36 +15,17 @@ const CoffeeOptions = () => {
                         <div className='choose-button'>
                             <button className = 'choose-option'>
                                 <div>
-                                    <img src='./Coffee.png' alt='Flavor' className='coffee-image' />
+                                    <img src='./Cocktail.png' alt='Flavor' className='cocktail-image' />
                                 </div>
-                                <h2 className = 'choose-text'>COFFEE</h2>
+                                <h2 className = 'choose-text-c'>COCKTAIL</h2>
                             </button>
                         </div>
                         <div className='choose-button'>
                             <button className = 'choose-option'>
                                 <div>
-                                    <img src='./Coffee.png' alt='Flavor' className='coffee-image' />
+                                    <img src='./Cocktail.png' alt='Flavor' className='cocktail-image' />
                                 </div>
-                                <h2 className = 'choose-text'>COFFEE</h2>
-                            </button>
-                        </div>
-                    </div>
-
-                    <div className = 'bev-opts'>
-                        <div className='choose-button'>
-                            <button className = 'choose-option'>
-                                <div>
-                                    <img src='./Coffee.png' alt='Flavor' className='coffee-image' />
-                                </div>
-                                <h2 className = 'choose-text'>COFFEE</h2>
-                            </button>
-                        </div>
-                        <div className='choose-button'>
-                            <button className = 'choose-option'>
-                                <div>
-                                    <img src='./Coffee.png' alt='Flavor' className='coffee-image' />
-                                </div>
-                                <h2 className = 'choose-text'>COFFEE</h2>
+                                <h2 className = 'choose-text-c'>COCKTAIL</h2>
                             </button>
                         </div>
                     </div>
@@ -53,53 +34,17 @@ const CoffeeOptions = () => {
                         <div className='choose-button'>
                             <button className = 'choose-option'>
                                 <div>
-                                    <img src='./Coffee.png' alt='Flavor' className='coffee-image' />
+                                    <img src='./Cocktail.png' alt='Flavor' className='cocktail-image' />
                                 </div>
-                                <h2 className = 'choose-text'>COFFEE</h2>
+                                <h2 className = 'choose-text-c'>COCKTAIL</h2>
                             </button>
                         </div>
                         <div className='choose-button'>
                             <button className = 'choose-option'>
                                 <div>
-                                    <img src='./Coffee.png' alt='Flavor' className='coffee-image' />
+                                    <img src='./Cocktail.png' alt='Flavor' className='cocktail-image' />
                                 </div>
-                                <h2 className = 'choose-text'>COFFEE</h2>
-                            </button>
-                        </div>
-                    </div>
-                    <div className = 'bev-opts'>
-                        <div className='choose-button'>
-                            <button className = 'choose-option'>
-                                <div>
-                                    <img src='./Coffee.png' alt='Flavor' className='coffee-image' />
-                                </div>
-                                <h2 className = 'choose-text'>COFFEE</h2>
-                            </button>
-                        </div>
-                        <div className='choose-button'>
-                            <button className = 'choose-option'>
-                                <div>
-                                    <img src='./Coffee.png' alt='Flavor' className='coffee-image' />
-                                </div>
-                                <h2 className = 'choose-text'>COFFEE</h2>
-                            </button>
-                        </div>
-                    </div>
-                    <div className = 'bev-opts'>
-                        <div className='choose-button'>
-                            <button className = 'choose-option'>
-                                <div>
-                                    <img src='./Coffee.png' alt='Flavor' className='coffee-image' />
-                                </div>
-                                <h2 className = 'choose-text'>COFFEE</h2>
-                            </button>
-                        </div>
-                        <div className='choose-button'>
-                            <button className = 'choose-option'>
-                                <div>
-                                    <img src='./Coffee.png' alt='Flavor' className='coffee-image' />
-                                </div>
-                                <h2 className = 'choose-text'>COFFEE</h2>
+                                <h2 className = 'choose-text-c'>COCKTAIL</h2>
                             </button>
                         </div>
                     </div>
@@ -108,17 +53,17 @@ const CoffeeOptions = () => {
                         <div className='choose-button'>
                             <button className = 'choose-option'>
                                 <div>
-                                    <img src='./Coffee.png' alt='Flavor' className='coffee-image' />
+                                    <img src='./Cocktail.png' alt='Flavor' className='cocktail-image' />
                                 </div>
-                                <h2 className = 'choose-text'>COFFEE</h2>
+                                <h2 className = 'choose-text-c'>COCKTAIL</h2>
                             </button>
                         </div>
                         <div className='choose-button'>
                             <button className = 'choose-option'>
                                 <div>
-                                    <img src='./Coffee.png' alt='Flavor' className='coffee-image' />
+                                    <img src='./Cocktail.png' alt='Flavor' className='cocktail-image' />
                                 </div>
-                                <h2 className = 'choose-text'>COFFEE</h2>
+                                <h2 className = 'choose-text-c'>COCKTAIL</h2>
                             </button>
                         </div>
                     </div>
@@ -126,17 +71,72 @@ const CoffeeOptions = () => {
                         <div className='choose-button'>
                             <button className = 'choose-option'>
                                 <div>
-                                    <img src='./Coffee.png' alt='Flavor' className='coffee-image' />
+                                    <img src='./Cocktail.png' alt='Flavor' className='cocktail-image' />
                                 </div>
-                                <h2 className = 'choose-text'>COFFEE</h2>
+                                <h2 className = 'choose-text-c'>COCKTAIL</h2>
                             </button>
                         </div>
                         <div className='choose-button'>
                             <button className = 'choose-option'>
                                 <div>
-                                    <img src='./Coffee.png' alt='Flavor' className='coffee-image' />
+                                    <img src='./Cocktail.png' alt='Flavor' className='cocktail-image' />
                                 </div>
-                                <h2 className = 'choose-text'>COFFEE</h2>
+                                <h2 className = 'choose-text-c'>COCKTAIL</h2>
+                            </button>
+                        </div>
+                    </div>
+                    <div className = 'bev-opts'>
+                        <div className='choose-button'>
+                            <button className = 'choose-option'>
+                                <div>
+                                    <img src='./Cocktail.png' alt='Flavor' className='cocktail-image' />
+                                </div>
+                                <h2 className = 'choose-text-c'>COCKTAIL</h2>
+                            </button>
+                        </div>
+                        <div className='choose-button'>
+                            <button className = 'choose-option'>
+                                <div>
+                                    <img src='./Cocktail.png' alt='Flavor' className='cocktail-image' />
+                                </div>
+                                <h2 className = 'choose-text-c'>COCKTAIL</h2>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div className = 'bev-opts'>
+                        <div className='choose-button'>
+                            <button className = 'choose-option'>
+                                <div>
+                                    <img src='./Cocktail.png' alt='Flavor' className='cocktail-image' />
+                                </div>
+                                <h2 className = 'choose-text-c'>COCKTAIL</h2>
+                            </button>
+                        </div>
+                        <div className='choose-button'>
+                            <button className = 'choose-option'>
+                                <div>
+                                    <img src='./Cocktail.png' alt='Flavor' className='cocktail-image' />
+                                </div>
+                                <h2 className = 'choose-text-c'>COCKTAIL</h2>
+                            </button>
+                        </div>
+                    </div>
+                    <div className = 'bev-opts'>
+                        <div className='choose-button'>
+                            <button className = 'choose-option'>
+                                <div>
+                                    <img src='./Cocktail.png' alt='Flavor' className='cocktail-image' />
+                                </div>
+                                <h2 className = 'choose-text-c'>COCKTAIL</h2>
+                            </button>
+                        </div>
+                        <div className='choose-button'>
+                            <button className = 'choose-option'>
+                                <div>
+                                    <img src='./Cocktail.png' alt='Flavor' className='cocktail-image' />
+                                </div>
+                                <h2 className = 'choose-text-c'>COCKTAIL</h2>
                             </button>
                         </div>
                     </div>
@@ -146,4 +146,4 @@ const CoffeeOptions = () => {
     );
 };
 
-export default CoffeeOptions;
+export default CocktailOptions;

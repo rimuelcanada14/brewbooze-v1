@@ -22,7 +22,7 @@ const Choose = () => {
                     </button>
                 </div>
                 <div className='choose-button'>
-                    <button className = 'choose-option'>
+                    <button className = 'choose-option' onClick={() => navigate('/cocktail-opt')}>
                         <div>
                             <img src='./Cocktail.png' alt='Flavor' className='cocktail-image' />
                         </div>
