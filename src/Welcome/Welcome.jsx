@@ -64,6 +64,7 @@ const Welcome = () => {
                 slidesPerView={1}
                 pagination={{ clickable: true }} // Ensure pagination is enabled
                 scrollbar={{ draggable: false }}
+                allowTouchMove={false}
                 className='swiper-container'
                 onSlideChange={onSlideChange}
                 onInit={onSlideChange} // Check initial slide
@@ -76,14 +77,15 @@ const Welcome = () => {
                                 Click the button below to start.</p>
                         </div>
                     </div>
-
+                    
                     <div>
-                        <img src='./Logo.png' alt='Business' className='business-image' />  
+                        <img src='./Logo.png' alt='Business' className='logo-image' />  
                     </div>
                     
                     <div className='button-container'>
                         <button onClick={handleNext} className='next-button'>Next</button>
                     </div>
+                    
                 </SwiperSlide>
 
                 <SwiperSlide className='welcome-slide'>

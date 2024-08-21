@@ -45,7 +45,7 @@
 
 .barista-image {
     width: auto;
-    height: 31.5em;
+    height: 27.5em;
     margin-top: 45%;
     margin-bottom: -1.7em;  
 }
@@ -58,9 +58,10 @@
     padding: 20px;
     margin-left: 1em;
     margin-right: 1em;
-    bottom: 1.7%;
+    margin-bottom: -2em;
+    bottom: 10.7%;
 }
-
+    
 .back-button {
     width: 88%;
     background-color: white;
@@ -97,11 +98,11 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
                 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     font-weight: 400;
-    bottom: 4%;
+    bottom: 8.4%;
 }
 
 .skip-button {
-    position: fixed;
+    position: absolute;
     top: 1%;
     right: 1%;
     background-color: transparent;
@@ -125,6 +126,12 @@
     width: auto;
     height: 18em;
     margin-top: 35%;
+    margin-bottom: -1.9em;  
+}
+.logo-image {
+    width: auto;
+    height: 22em;
+    margin-top: 30%;
     margin-bottom: -1.9em;  
 }
 
@@ -154,19 +161,11 @@
     background: #ffffff; /* Active bullet color */
 }
 .slide-number{
-    position: fixed;
+    position: absolute;
     top: 2.3%;
     left: 5%;
     background-color: transparent;
     color: #A38675;
     z-index: 10;
     border: none;
-}
-@media (min-width: 527px) {
-    .barista-image {
-        width: auto;
-        height: 45em;
-        margin-top: 25%;
-        margin-bottom: -1.7em;  
-    }
 }

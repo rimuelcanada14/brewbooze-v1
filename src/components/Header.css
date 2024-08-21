@@ -7,6 +7,15 @@
     url("https://db.onlinewebfonts.com/t/1a69bbaf09f62b4596f5020478cd0399.ttf")format("truetype"),
     url("https://db.onlinewebfonts.com/t/1a69bbaf09f62b4596f5020478cd0399.svg#Poppins ExtraBold")format("svg");
 }
+@font-face {
+    font-family: "Le Jour Script";
+    src: url("https://db.onlinewebfonts.com/t/9f4b12a4b8d65b0c0af5e70ab51cef0f.eot");
+    src: url("https://db.onlinewebfonts.com/t/9f4b12a4b8d65b0c0af5e70ab51cef0f.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/9f4b12a4b8d65b0c0af5e70ab51cef0f.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/9f4b12a4b8d65b0c0af5e70ab51cef0f.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/9f4b12a4b8d65b0c0af5e70ab51cef0f.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/9f4b12a4b8d65b0c0af5e70ab51cef0f.svg#Le Jour Script")format("svg");
+}
 
 .header {
     position: fixed;
@@ -32,14 +41,17 @@
     align-items: center;
 }
 .header-line h2{
-    font-family: 'Poppins ExtraBold', 'Poppins';
+    font-family: 'Le Jour Script';
     margin: 15px;
-    font-size: 30px;
+    font-size: 23px;
     color: white;
+    margin-top: 1em;
+    
 }
 .header-link {
     color: white; /* Maintain the text color */
     text-decoration: none; /* Remove underline */
+    font-weight: 600;
 }
 .header-link:hover {
     color: white;

@@ -7,7 +7,7 @@ const Header = (props) => {
         <div className="header">
             <div className="header-line">
                 <h2 className='header-text'>
-                    <Link to="/home" className="header-link">BREWBOOZE</Link>
+                    <Link to="/home" className="header-link">BrewBooze</Link>
                 </h2>
             </div>
         </div>

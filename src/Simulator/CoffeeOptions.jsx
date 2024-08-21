@@ -9,7 +9,7 @@ const CoffeeOptions = () => {
                 <Header />
             </div>
 
-            <div className="choose-container">
+            <div className="bev">
                 <div className = 'bev-container'>
                     <div className = 'bev-opts'>
                         <div className='choose-button'>
@@ -17,7 +17,7 @@ const CoffeeOptions = () => {
                                 <div>
                                     <img src='./Coffee.png' alt='Flavor' className='coffee-image' />
                                 </div>
-                                <h2 className = 'choose-text'>COFFEE</h2>
+                                <h2 className = 'bev-text'>ARABICA</h2>
                             </button>
                         </div>
                         <div className='choose-button'>
@@ -25,26 +25,7 @@ const CoffeeOptions = () => {
                                 <div>
                                     <img src='./Coffee.png' alt='Flavor' className='coffee-image' />
                                 </div>
-                                <h2 className = 'choose-text'>COFFEE</h2>
-                            </button>
-                        </div>
-                    </div>
-
-                    <div className = 'bev-opts'>
-                        <div className='choose-button'>
-                            <button className = 'choose-option'>
-                                <div>
-                                    <img src='./Coffee.png' alt='Flavor' className='coffee-image' />
-                                </div>
-                                <h2 className = 'choose-text'>COFFEE</h2>
-                            </button>
-                        </div>
-                        <div className='choose-button'>
-                            <button className = 'choose-option'>
-                                <div>
-                                    <img src='./Coffee.png' alt='Flavor' className='coffee-image' />
-                                </div>
-                                <h2 className = 'choose-text'>COFFEE</h2>
+                                <h2 className = 'bev-text'>ROBUSTA</h2>
                             </button>
                         </div>
                     </div>
@@ -55,7 +36,7 @@ const CoffeeOptions = () => {
                                 <div>
                                     <img src='./Coffee.png' alt='Flavor' className='coffee-image' />
                                 </div>
-                                <h2 className = 'choose-text'>COFFEE</h2>
+                                <h2 className = 'bev-text'>LIBERICA</h2>
                             </button>
                         </div>
                         <div className='choose-button'>
@@ -63,43 +44,7 @@ const CoffeeOptions = () => {
                                 <div>
                                     <img src='./Coffee.png' alt='Flavor' className='coffee-image' />
                                 </div>
-                                <h2 className = 'choose-text'>COFFEE</h2>
-                            </button>
-                        </div>
-                    </div>
-                    <div className = 'bev-opts'>
-                        <div className='choose-button'>
-                            <button className = 'choose-option'>
-                                <div>
-                                    <img src='./Coffee.png' alt='Flavor' className='coffee-image' />
-                                </div>
-                                <h2 className = 'choose-text'>COFFEE</h2>
-                            </button>
-                        </div>
-                        <div className='choose-button'>
-                            <button className = 'choose-option'>
-                                <div>
-                                    <img src='./Coffee.png' alt='Flavor' className='coffee-image' />
-                                </div>
-                                <h2 className = 'choose-text'>COFFEE</h2>
-                            </button>
-                        </div>
-                    </div>
-                    <div className = 'bev-opts'>
-                        <div className='choose-button'>
-                            <button className = 'choose-option'>
-                                <div>
-                                    <img src='./Coffee.png' alt='Flavor' className='coffee-image' />
-                                </div>
-                                <h2 className = 'choose-text'>COFFEE</h2>
-                            </button>
-                        </div>
-                        <div className='choose-button'>
-                            <button className = 'choose-option'>
-                                <div>
-                                    <img src='./Coffee.png' alt='Flavor' className='coffee-image' />
-                                </div>
-                                <h2 className = 'choose-text'>COFFEE</h2>
+                                <h2 className = 'bev-text'>EXCELSA</h2>
                             </button>
                         </div>
                     </div>
@@ -110,7 +55,7 @@ const CoffeeOptions = () => {
                                 <div>
                                     <img src='./Coffee.png' alt='Flavor' className='coffee-image' />
                                 </div>
-                                <h2 className = 'choose-text'>COFFEE</h2>
+                                <h2 className = 'bev-text-break'>FRENCH<br/>VANILLA</h2>
                             </button>
                         </div>
                         <div className='choose-button'>
@@ -118,17 +63,19 @@ const CoffeeOptions = () => {
                                 <div>
                                     <img src='./Coffee.png' alt='Flavor' className='coffee-image' />
                                 </div>
-                                <h2 className = 'choose-text'>COFFEE</h2>
+                                <h2 className = 'bev-text'>HAZELNUT</h2>
                             </button>
                         </div>
                     </div>
+
+
                     <div className = 'bev-opts'>
                         <div className='choose-button'>
                             <button className = 'choose-option'>
                                 <div>
                                     <img src='./Coffee.png' alt='Flavor' className='coffee-image' />
                                 </div>
-                                <h2 className = 'choose-text'>COFFEE</h2>
+                                <h2 className = 'bev-text'>CARAMEL</h2>
                             </button>
                         </div>
                         <div className='choose-button'>
@@ -136,7 +83,26 @@ const CoffeeOptions = () => {
                                 <div>
                                     <img src='./Coffee.png' alt='Flavor' className='coffee-image' />
                                 </div>
-                                <h2 className = 'choose-text'>COFFEE</h2>
+                                <h2 className = 'bev-text-break'>PUMPKIN<br/>SPICE</h2>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div className = 'bev-opts'>
+                        <div className='choose-button'>
+                            <button className = 'choose-option'>
+                                <div>
+                                    <img src='./Coffee.png' alt='Flavor' className='coffee-image' />
+                                </div>
+                                <h2 className = 'bev-text'>PEPPERMINT</h2>
+                            </button>
+                        </div>
+                        <div className='choose-button'>
+                            <button className = 'choose-option'>
+                                <div>
+                                    <img src='./Coffee.png' alt='Flavor' className='coffee-image' />
+                                </div>
+                                <h2 className = 'bev-text'>MOCHA</h2>
                             </button>
                         </div>
                     </div>
