@@ -2,9 +2,13 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Welcome from './Welcome/Welcome';
 import Home from './Home/Home';
-import Choose from './Simulator/Choose';
+
+import ChooseSimulator from './Simulator/ChooseSimulator';
 import CoffeeOptions from './Simulator/CoffeeOptions';
 import CocktailOptions from './Simulator/CocktailOptions';
+
+import ChooseRecommender from './Recommender/ChooseReco';
+import CoffeeRecommender from './Recommender/CoffeeRecommender';
 
 const App = () => {
     return (
@@ -12,9 +16,14 @@ const App = () => {
             <Routes>
                 <Route path="/" element={<Welcome />} />
                 <Route path="home" element={<Home />} />
-                <Route path="choose" element={<Choose />} />
+
+                <Route path="choose-simulator" element={<ChooseSimulator />} />
                 <Route path="coffee-opt" element={<CoffeeOptions />} />
                 <Route path="cocktail-opt" element={<CocktailOptions />} />
+
+                <Route path="choose-recommender" element={<ChooseRecommender />} />
+                <Route path="recommend-coffee" element={<CoffeeRecommender />} />
+                
             </Routes>
         </Router>
     );

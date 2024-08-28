@@ -43,7 +43,7 @@ const Home = () => {
                         {activeIndex === 0 && (
                             <div className="accordion-content">
                                 <p>Simulation of cocktails and coffee beverages will be shown with the ingredients integrated with it!</p>
-                                <button className="accordion-inner-button" onClick={() => navigate('/choose')}>Start Simulation</button>
+                                <button className="accordion-inner-button" onClick={() => navigate('/choose-simulator')}>Start Simulation</button>
                             </div>
                         )}
                     </div>
@@ -55,7 +55,7 @@ const Home = () => {
                             <div className="accordion-content">
                                 <p>With the help of GPT OpenAI, BrewBooze can help you in finding the best flavor of beverage 
                                     based on your preferences!</p>
-                                <button className="accordion-inner-button">Get Recommendations</button>
+                                <button className="accordion-inner-button"  onClick={() => navigate('/choose-recommender')}>Get Recommendations</button>
                             </div>
                         )}
                     </div>
