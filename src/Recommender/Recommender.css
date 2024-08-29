@@ -104,9 +104,16 @@
     border-radius: 5px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
                 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; /* Smooth transition for background color, text color, and border color */
 }
-.answer-button:hover {
-    background-color: #0056b3;
+.answer-button:active {
+  background-color: #ddd; /* Background color when button is active (clicked) */
+  border-color: #bbb; /* Border color when button is active */
+}
+
+.answer-button.selected {
+  background-color: #A5A58D; /* Background color for the selected button */
+  color: white; /* Text color for the selected button */
 }
 .button-reco {
     position: fixed;

@@ -1,22 +1,4 @@
 import React from "react";
-import Header from '../components/Header';
-
-// const Chatbot = ({ recommendation, onRecommendAgain }) => {
-//   return (
-//     <div>
-//       <div>
-//         <h1>Recommendation</h1>
-//         <p>{recommendation}</p>
-//       </div>
-//       <button onClick={onRecommendAgain} style={{ marginTop: '20px' }}>
-//         Recommend Again
-//       </button>
-//     </div>
-//   );
-// };
-
-// export default Chatbot;
-
 
 const Chatbot = ({ recommendation, onRecommendAgain }) => {
     return (

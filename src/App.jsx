@@ -9,6 +9,7 @@ import CocktailOptions from './Simulator/CocktailOptions';
 
 import ChooseRecommender from './Recommender/ChooseReco';
 import CoffeeRecommender from './Recommender/CoffeeRecommender';
+import CocktailRecommender from './Recommender/CocktailRecommender';
 
 const App = () => {
     return (
@@ -23,6 +24,7 @@ const App = () => {
 
                 <Route path="choose-recommender" element={<ChooseRecommender />} />
                 <Route path="recommend-coffee" element={<CoffeeRecommender />} />
+                <Route path="recommend-cocktail" element={<CocktailRecommender />} />
                 
             </Routes>
         </Router>

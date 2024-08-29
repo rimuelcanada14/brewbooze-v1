@@ -4,7 +4,7 @@ import Chatbot from './Chatbot';
 import Header from '../components/Header';
 import './Recommender.css';
 
-const CoffeeRecommendation = () => {
+const CocktailRecommendation = () => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [answers, setAnswers] = useState([]);
   const [inputValue, setInputValue] = useState('');
@@ -14,30 +14,31 @@ const CoffeeRecommendation = () => {
   const [tempSelectedOption, setTempSelectedOption] = useState(null);
 
   const questions = [
-    "Do you prefer your coffee hot or cold?",
-    "Do you enjoy strong, bold flavors or milder, more balanced flavors?",
-    "Do you like your coffee black or with milk?",
-    "Do you prefer your coffee with or without sweetness?",
-    "Do you like a rich, creamy texture in your coffee?",
-    "Are you interested in trying a unique or unconventional coffee flavor?",
-    "Do you prefer a lighter coffee with less caffeine or a stronger coffee with more caffeine?",
-    "Do you enjoy a more intense espresso-based coffee or a longer, more diluted coffee?",
-    "Would you like to try a coffee that is more fruity and floral or more chocolatey and nutty?",
-    "Do you prefer a simple coffee or one with additional flavors and toppings?"
+    "Do you prefer a classic cocktail or something more experimental?",
+    "Would you like a cocktail with a fruity or more herbal taste?",
+    "Are you in the mood for a strong or light cocktail?",
+    "Do you prefer a cocktail with a sweet or sour flavor profile?",
+    "Would you like a cocktail with a bold or subtle flavor?",
+    "Do you prefer a cocktail with a twist of citrus or one with a richer, darker flavor?",
+    "Would you like a cocktail with a high or low alcohol content?",
+    "Are you interested in a cocktail with a simple or complex mix of ingredients?",
+    "Do you want a cocktail that’s more traditional or one with a modern twist?",
+    "Would you prefer a cocktail that’s more refreshing or warming?"
   ];
   
   const options = [
-    ["Hot", "Cold"],
-    ["Strong and bold", "Mild and balanced"],
-    ["Black", "With milk"],
-    ["Sweet", "Not sweet"],
-    ["Yes", "No"],
-    ["Yes", "No"],
-    ["Lighter, less caffeine", "Stronger, more caffeine"],
-    ["Espresso-based (intense)", "Longer (more diluted)"],
-    ["Fruity and floral", "Chocolatey and nutty"],
-    ["Simple", "With flavors and toppings"]
+    ["Classic", "Experimental"],
+    ["Fruity", "Herbal"],
+    ["Strong", "Light"],
+    ["Sweet", "Sour"],
+    ["Bold", "Subtle"],
+    ["Citrus", "Richer/Darker"],
+    ["High", "Low"],
+    ["Simple", "Complex"],
+    ["Traditional", "Modern"],
+    ["Refreshing", "Warming"]
   ];
+  
 
   const handleAnswerClick = (value) => {
     setTempSelectedOption(value);
@@ -71,7 +72,7 @@ const CoffeeRecommendation = () => {
             "messages": [
               {
                 "role": "system",
-                "content": "Recommend a coffee flavor from these options: (Arabica, Robusta, Liberica, Excelsa, Black, Americano, Latte, Cappuccino, Espresso Shots, Doppio, Macchiato, Mocha, Flat White, Ristretto, Affogato, Iced Coffee, Iced Espresso, Cold Brew, Frappuccino). Only provide in the statement: 'The recommended coffee flavor for your preferences is: ' and provide its ingredients."
+                "content": "Recommend a cocktail flavor from these options: (Gin Pom, Weng Weng, Shembot, Expired, Destroso, RPG, Kisay, Red Alert, Tia Maria’s Zombie, Toma Collins). Only provide in the statement: 'The recommended cocktail flavor for your preferences is: ' and provide its ingredients."
               },
               {
                 "role": "user",
@@ -128,7 +129,7 @@ const CoffeeRecommendation = () => {
       <div>
         {!showChatbot ? (
           <div className='reco-page'>
-            <h2 className='reco-title'>Coffee Flavor Recommender</h2>
+            <h2 className='reco-title'>Cocktail Flavor Recommender</h2>
             {currentQuestionIndex === 0 ? (
               <div>
                 <p className='reco-questions'>Please enter any allergies you have:</p>
@@ -163,8 +164,8 @@ const CoffeeRecommendation = () => {
               <button className='next3-button'
                 onClick={handleNext}
                 disabled={
-                  (currentQuestionIndex === 0 && !allergy.trim()) || // Disable if allergy input is empty
-                  (currentQuestionIndex > 0 && tempSelectedOption === null) // Disable if no option selected
+                  (currentQuestionIndex === 0 && !allergy.trim()) ||
+                  (currentQuestionIndex > 0 && tempSelectedOption === null) 
                 }
               >
                 {currentQuestionIndex === questions.length ? 'Finish' : 'Next'}
@@ -182,4 +183,4 @@ const CoffeeRecommendation = () => {
   );
 };
 
-export default CoffeeRecommendation;
+export default CocktailRecommendation;
