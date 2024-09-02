@@ -72,7 +72,7 @@ const CocktailRecommendation = () => {
             "messages": [
               {
                 "role": "system",
-                "content": "Recommend a cocktail flavor from these options: (Gin Pom, Weng Weng, Shembot, Expired, Destroso, RPG, Kisay, Red Alert, Tia Maria’s Zombie, Toma Collins). Only provide in the statement: 'The recommended cocktail flavor for your preferences is: ' and provide its ingredients."
+                "content": "Recommend a cocktail flavor from these options: (Gin Pom, Weng Weng, Shembot, Expired, Destroso, RPG, Kisay, Red Alert, Tia Maria’s Zombie, Toma Collins). Only provide in the statement: 'The recommended cocktail flavor for your preferences is: ' and provide its ingredients. Also state that the ingredient they are allergic to is present or not. If that ingredient is present, DO NOT RECOMMEND A FLAVOR and state why."
               },
               {
                 "role": "user",
