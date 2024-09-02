@@ -12,7 +12,12 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+@font-face {
+  font-family: 'Le Jour Script';
+  src: url('./assets/LeJourScript.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 a {
   font-weight: 500;
   color: #646cff;

@@ -18,9 +18,9 @@ const CoffeeRecommendation = () => {
     "Do you enjoy strong, bold flavors or milder, more balanced flavors?",
     "Do you like your coffee black or with milk?",
     "Do you prefer your coffee with or without sweetness?",
+    "Do you prefer a lighter coffee with less caffeine or a stronger coffee with more caffeine?",
     "Do you like a rich, creamy texture in your coffee?",
     "Are you interested in trying a unique or unconventional coffee flavor?",
-    "Do you prefer a lighter coffee with less caffeine or a stronger coffee with more caffeine?",
     "Do you enjoy a more intense espresso-based coffee or a longer, more diluted coffee?",
     "Would you like to try a coffee that is more fruity and floral or more chocolatey and nutty?",
     "Do you prefer a simple coffee or one with additional flavors and toppings?"
@@ -32,8 +32,8 @@ const CoffeeRecommendation = () => {
     ["Black", "With milk"],
     ["Sweet", "Not sweet"],
     ["Yes", "No"],
-    ["Yes", "No"],
     ["Lighter, less caffeine", "Stronger, more caffeine"],
+    ["Yes", "No"],
     ["Espresso-based (intense)", "Longer (more diluted)"],
     ["Fruity and floral", "Chocolatey and nutty"],
     ["Simple", "With flavors and toppings"]
