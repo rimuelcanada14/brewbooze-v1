@@ -14,7 +14,7 @@ const Choose = () => {
             </div>
 
             <div className="choose-container">
-                <h1>CHOOSE YOUR BEVERAGE</h1>
+                <h1>CHOOSE YOUR<br/>BEVERAGE</h1>
                 <div className="choose-simu">
                     <div className='choose-button'>
                             <button className = 'choose-option' onClick={() => navigate('/recommend-coffee')}>

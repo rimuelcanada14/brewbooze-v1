@@ -49,21 +49,42 @@
     margin-top: 45%;
     margin-bottom: -1.7em;  
 }
-
 .button-container {
-    position: fixed;
+    position: fixed; /* Sticks to the bottom of the viewport */
+    bottom: 0; /* Aligns with the bottom */
+    width: 100%; /* Full width to match the page */
+    padding: 10px 20px;
     display: flex;
-    justify-content: space-between;
-    width: 95%;
-    padding: 20px;
-    margin-left: 1em;
-    margin-right: 1em;
-    margin-bottom: -2em;
-    bottom: 10.7%;
+    justify-content: space-between; /* Align buttons with space between */
+    z-index: 100; /* Ensure it appears on top of Swiper */
 }
-    
+
+.back-button, .next2-button {
+    flex: 1;
+    margin: 0 10px;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.next-button {
+    width: 45.5%;
+    color: white;
+    border: none;
+    background-color: #A38675;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+                0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding-right: .5em;
+    margin-left: .5em;
+    margin-right: .5em;
+    font-weight: 400;
+}
 .back-button {
-    width: 88%;
+    width: 100%;
     background-color: white;
     border: none;
     color: #7e604f;
@@ -76,7 +97,7 @@
 }
 
 .next2-button {
-    width: 88%;
+    width: 100%;
     color: white;
     border: none;
     background-color: #A38675;
@@ -86,19 +107,6 @@
                 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     margin-left: .5em;
     font-weight: 400;
-}
-
-.next-button {
-    position: fixed;
-    width: 95%;
-    background-color: #A38675;
-    border: none;
-    color: white;
-    border-radius: 20px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
-                0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    font-weight: 400;
-    bottom: 8.4%;
 }
 
 .skip-button {

@@ -2,7 +2,7 @@ import React, { useRef, useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
-import 'swiper/css/pagination'; // Ensure pagination styles are imported
+import 'swiper/css/pagination';
 import './Welcome.css';
 
 const Welcome = () => {
@@ -16,23 +16,24 @@ const Welcome = () => {
         if (swiperRef.current && swiperRef.current.swiper) {
             const swiper = swiperRef.current.swiper;
             if (swiper.activeIndex === swiper.slides.length - 1) {
-                navigate('/home');
+                navigate('/home'); // Navigate to home on last slide
             } else {
-                swiper.slideNext();
+                swiper.slideNext(); // Move to the next slide
             }
         }
     };
-
+    
     const handlePrev = () => {
         if (swiperRef.current && swiperRef.current.swiper) {
-            swiperRef.current.swiper.slidePrev();
+            swiperRef.current.swiper.slidePrev(); // Move to the previous slide
         }
     };
+    
 
     const handleSkip = () => {
         if (swiperRef.current && swiperRef.current.swiper) {
-            const totalSlides = swiperRef.current.swiper.slides.length;
-            swiperRef.current.swiper.slideTo(totalSlides - 1); // Skip to last slide
+            const total = swiperRef.current.swiper.slides.length;
+            swiperRef.current.swiper.slideTo(total - 1); // Skip to last slide
         }
     };
 
@@ -56,18 +57,17 @@ const Welcome = () => {
     return (
         <div className='welcome-page'>
             {!isLastSlide && (
-                <button onClick={handleSkip} className='skip-button'>Skip </button>
+                <button onClick={handleSkip} className='skip-button'>Skip</button>
             )}
             <Swiper
                 ref={swiperRef}
                 spaceBetween={0}
                 slidesPerView={1}
-                pagination={{ clickable: true }} // Ensure pagination is enabled
-                scrollbar={{ draggable: false }}
-                allowTouchMove={false}
+                pagination={{ clickable: true }} // Enable clickable pagination
+                allowTouchMove={false} // Disables swipe gestures
                 className='swiper-container'
                 onSlideChange={onSlideChange}
-                onInit={onSlideChange} // Check initial slide
+                onInit={onSlideChange} // Initialize slide state
             >
                 <SwiperSlide className='welcome-slide'>
                     <div className='simulate-text'>
@@ -81,11 +81,6 @@ const Welcome = () => {
                     <div>
                         <img src='./Logo.png' alt='Business' className='logo-image' />  
                     </div>
-                    
-                    <div className='button-container'>
-                        <button onClick={handleNext} className='next-button'>Next</button>
-                    </div>
-                    
                 </SwiperSlide>
 
                 <SwiperSlide className='welcome-slide'>
@@ -101,11 +96,6 @@ const Welcome = () => {
                     <div>
                         <img src='./Barista3D.png' alt='Drink being made' className='barista-image' />
                     </div>
-                
-                    <div className='button-container'>
-                        <button onClick={handlePrev} className='back-button'>Back</button>
-                        <button onClick={handleNext} className='next2-button'>Next</button>
-                    </div>
                 </SwiperSlide>
 
                 <SwiperSlide className='welcome-slide'>
@@ -119,11 +109,6 @@ const Welcome = () => {
 
                     <div>
                         <img src='./Flavor3D.png' alt='Flavor' className='flavor-image' />
-                    </div>
-                    
-                    <div className='button-container'>
-                        <button onClick={handlePrev} className='back-button'>Back</button>
-                        <button onClick={handleNext} className='next2-button'>Next</button>
                     </div>
                 </SwiperSlide>
 
@@ -139,14 +124,23 @@ const Welcome = () => {
                     <div>
                         <img src='./Business3D.png' alt='Business' className='business-image' />  
                     </div>
-                    
-                    <div className='button-container'>
-                        <button onClick={handlePrev} className='back-button'>Back</button>
-                        <button onClick={handleNext} className='next2-button'>Start</button>
-                    </div>
                 </SwiperSlide>
             </Swiper>
 
+            {/* Fixed Button Container */}
+            <div className='button-container'>
+                {currentSlide > 1 && (
+                    <button onClick={handlePrev} className='back-button'>Back</button>
+                )}
+                <button
+                    onClick={handleNext}
+                    className={isLastSlide ? 'next-button' : 'next2-button'}
+                >
+                    {isLastSlide ? 'Start' : 'Next'}
+                </button>
+            </div>
+
+            {/* Slide Number Indicator */}
             <div className='slide-number'>
                 {currentSlide}/{totalSlides}
             </div>

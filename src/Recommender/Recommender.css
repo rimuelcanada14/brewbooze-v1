@@ -1,9 +1,14 @@
+.recommender{
+    overflow: hidden;
+    margin-top: 0em;
+}
 .choose-page {
     width: 100vw;
     height: 100vh;
     display: flex;
     justify-content: center; 
     align-items: center;
+
 }
 .choose-container {
     display: flex;
@@ -13,6 +18,7 @@
     align-items: center;
     text-align: center;
     margin-top: -4em;
+    color: #054243;
 }
 .choose-simu{
     display: flex;
@@ -80,18 +86,22 @@
     top: 12%;
     width: 100%;
     justify-content: center;
+    color: #054243;
 }
 .reco-questions{
     font-size: 24px;
     font-weight: 600;
-    padding: .5em;
-    margin-top: -1em;
+    padding: 1em;
+    margin-top: 0em;
+    color: #054243;
 }
 .answer-buttons {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     margin-top: -1.5em;
+    padding-top: 1em;
+    padding-bottom: 1em;
 }
 .answer-button {
     width: 15em;
@@ -102,8 +112,6 @@
     margin: 5px;
     cursor: pointer;
     border-radius: 5px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
-                0 6px 20px 0 rgba(0, 0, 0, 0.19);
     transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; /* Smooth transition for background color, text color, and border color */
 }
 .answer-button:active {
@@ -114,6 +122,8 @@
 .answer-button.selected {
   background-color: #A5A58D; /* Background color for the selected button */
   color: white; /* Text color for the selected button */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+                0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .button-reco {
     position: fixed;
@@ -147,6 +157,7 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
                 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     font-weight: 400;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 .prev-button:disabled {
     background-color: #f0f0f0; 
@@ -165,9 +176,24 @@
     justify-content: center;
     text-align: center;
     width: 100%;
+    color: #054243;
 }
 .chatbot{
-    margin-top: -2em;
+    margin-top: -2.9em;
     padding: 20px;
     text-align: center;
+    color: black;
+}
+.loading-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full screen height */
+    background-color: rgba(0, 0, 0, 0.19);
+  }
+.question-number{
+    position: absolute;
+    top: 10%;
+    left: 2%;
+    color: #A38675;
 }

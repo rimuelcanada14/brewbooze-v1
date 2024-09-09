@@ -3,6 +3,7 @@ import axios from 'axios';
 import Chatbot from './Chatbot';
 import Header from '../components/Header';
 import './Recommender.css';
+import { Puff } from 'react-loading-icons';
 
 const CoffeeRecommendation = () => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -12,6 +13,8 @@ const CoffeeRecommendation = () => {
   const [recommendation, setRecommendation] = useState('');
   const [allergy, setAllergy] = useState('');
   const [tempSelectedOption, setTempSelectedOption] = useState(null);
+  const [showPopup, setShowPopup] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const questions = [
     "Do you prefer your coffee hot or cold?",
@@ -20,7 +23,7 @@ const CoffeeRecommendation = () => {
     "Do you prefer your coffee with or without sweetness?",
     "Do you prefer a lighter coffee with less caffeine or a stronger coffee with more caffeine?",
     "Do you like a rich, creamy texture in your coffee?",
-    "Are you interested in trying a unique or unconventional coffee flavor?",
+    "Are you interested in trying a unique coffee flavor or common coffee flavor?",
     "Do you enjoy a more intense espresso-based coffee or a longer, more diluted coffee?",
     "Would you like to try a coffee that is more fruity and floral or more chocolatey and nutty?",
     "Do you prefer a simple coffee or one with additional flavors and toppings?"
@@ -31,9 +34,9 @@ const CoffeeRecommendation = () => {
     ["Strong and bold", "Mild and balanced"],
     ["Black", "With milk"],
     ["Sweet", "Not sweet"],
-    ["Yes", "No"],
     ["Lighter, less caffeine", "Stronger, more caffeine"],
     ["Yes", "No"],
+    ["Unique Flavors", "Common Flavors"],
     ["Espresso-based (intense)", "Longer (more diluted)"],
     ["Fruity and floral", "Chocolatey and nutty"],
     ["Simple", "With flavors and toppings"]
@@ -41,19 +44,25 @@ const CoffeeRecommendation = () => {
 
   const handleAnswerClick = (value) => {
     setTempSelectedOption(value);
-  };  
+    setShowPopup(false);
+  };
 
   const handleNext = async () => {
     if (currentQuestionIndex === 0) {
       if (!allergy.trim()) return;
       setInputValue(`Allergy: ${allergy}\n`);
       setCurrentQuestionIndex(currentQuestionIndex + 1);
+    } else if (tempSelectedOption === null) {
+      setShowPopup(true); 
     } else if (currentQuestionIndex < questions.length - 1) {
       const newAnswers = [...answers];
       newAnswers[currentQuestionIndex - 1] = tempSelectedOption;
       setAnswers(newAnswers);
+      setTempSelectedOption(null);
       setCurrentQuestionIndex(currentQuestionIndex + 1);
     } else {
+      setLoading(true);
+
       const newAnswers = [...answers];
       newAnswers[currentQuestionIndex - 1] = tempSelectedOption;
       setAnswers(newAnswers);
@@ -97,6 +106,7 @@ const CoffeeRecommendation = () => {
       } catch (error) {
         console.error("Error fetching response from OpenAI:", error);
       } finally {
+        setLoading(false);
         setShowChatbot(true);
       }
     }
@@ -119,63 +129,92 @@ const CoffeeRecommendation = () => {
     setTempSelectedOption(null);
   };
 
+  const closePopup = () => {
+    setShowPopup(false);
+  };
+
+  const handleKeyDown = (e) => {
+    if (e.key === 'Enter') {
+      handleNext();
+    }
+  };
+
   return (
     <>
       <div className='header-off'>
         <Header />
       </div>
 
-      <div>
-        {!showChatbot ? (
-          <div className='reco-page'>
-            <h2 className='reco-title'>Coffee Flavor Recommender</h2>
-            {currentQuestionIndex === 0 ? (
-              <div>
-                <p className='reco-questions'>Please enter any allergies you have:</p>
-                <input
-                  type="text"
-                  value={allergy}
-                  onChange={(e) => setAllergy(e.target.value)}
-                  placeholder="Type your allergies here..."
-                  style={{ width: '85%', padding: '10px', marginBottom: '20px', borderRadius: '10px' }}
-                />
-              </div>
-            ) : (
-              <div>
-                <p className='reco-questions'>{questions[currentQuestionIndex - 1]}</p>
-                <div className='answer-buttons'>
-                  {options[currentQuestionIndex - 1].map(option => (
-                    <button
-                      key={option}
-                      onClick={() => handleAnswerClick(option)}
-                      className={`answer-button ${tempSelectedOption === option ? 'selected' : ''}`} 
-                    >
-                      {option}
-                    </button>
-                  ))}
+      <div className='recommender'>
+        {loading ? (
+          <div className="loading-screen">
+            <Puff stroke="#000" height={50} width={50} />
+          </div>
+        
+        ) : (
+          !showChatbot ? (
+            <div className='reco-page'>
+              <h2 className='reco-title'>Coffee Flavor<br/>Recommender</h2>
+              {currentQuestionIndex === 0 ? (
+                <div className='reco-input'>
+                  <p className='reco-questions'>Please enter any allergies you have:</p>
+                  <input
+                    type="text"
+                    value={allergy}
+                    onChange={(e) => setAllergy(e.target.value)}
+                    onKeyDown={handleKeyDown}
+                    placeholder="Type your allergies here..."
+                    style={{ width: '85%', padding: '10px', marginBottom: '20px', borderRadius: '10px' }}
+                  />
                 </div>
+              ) : (
+                <div>
+                  <p className='question-number'>
+                    {currentQuestionIndex}/{questions.length}
+                  </p>
+                  <p className='reco-questions'>{questions[currentQuestionIndex - 1]}</p>
+                  <div className='answer-buttons'>
+                    {options[currentQuestionIndex - 1].map(option => (
+                      <button
+                        key={option}
+                        onClick={() => handleAnswerClick(option)}
+                        className={`answer-button ${tempSelectedOption === option ? 'selected' : ''}`}
+                      >
+                        {option}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              )}
+              <div className='button-reco'>
+                <button onClick={handlePrev} disabled={currentQuestionIndex === 0} className='prev-button'>
+                  Previous
+                </button>
+                <button className='next3-button'
+                  onClick={handleNext}
+                  disabled={
+                    (currentQuestionIndex === 0 && !allergy.trim()) ||
+                    (currentQuestionIndex > 0 && tempSelectedOption === null)
+                  }
+                >
+                  {currentQuestionIndex === questions.length ? 'Finish' : 'Next'}
+                </button>
               </div>
-            )}
-            <div className='button-reco'>
-              <button onClick={handlePrev} disabled={currentQuestionIndex === 0} className='prev-button'>
-                Previous
-              </button>
-              <button className='next3-button'
-                onClick={handleNext}
-                disabled={
-                  (currentQuestionIndex === 0 && !allergy.trim()) || // Disable if allergy input is empty
-                  (currentQuestionIndex > 0 && tempSelectedOption === null) // Disable if no option selected
-                }
-              >
-                {currentQuestionIndex === questions.length ? 'Finish' : 'Next'}
-              </button>
+            </div>
+          ) : (
+            <Chatbot
+              recommendation={recommendation}
+              onRecommendAgain={handleRecommendAgain}
+            />
+          )
+        )}
+        {showPopup && (
+          <div className='popup'>
+            <div className='popup-content'>
+              <p>Please answer the question before proceeding!</p>
+              <button onClick={closePopup}>OK</button>
             </div>
           </div>
-        ) : (
-          <Chatbot
-            recommendation={recommendation}
-            onRecommendAgain={handleRecommendAgain}
-          />
         )}
       </div>
     </>
