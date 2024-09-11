@@ -11,6 +11,8 @@ import ChooseRecommender from './Recommender/ChooseReco';
 import CoffeeRecommender from './Recommender/CoffeeRecommender';
 import CocktailRecommender from './Recommender/CocktailRecommender';
 
+import Predict from './CostPredict/MLR';
+
 const App = () => {
     return (
         <Router>
@@ -25,6 +27,8 @@ const App = () => {
                 <Route path="choose-recommender" element={<ChooseRecommender />} />
                 <Route path="recommend-coffee" element={<CoffeeRecommender />} />
                 <Route path="recommend-cocktail" element={<CocktailRecommender />} />
+
+                <Route path="predict" element={<Predict />} />
                 
             </Routes>
         </Router>
