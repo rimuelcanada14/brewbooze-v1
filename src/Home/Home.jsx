@@ -68,7 +68,7 @@ const Home = () => {
                         {activeIndex === 2 && (
                             <div className="accordion-content">
                                 <p>BrewBooze will provide a breakdown of costs in starting your own café to make you prepared for its future!</p>
-                                <button className="accordion-inner-button">Calculate Costs</button>
+                                <button className="accordion-inner-button" onClick={() => navigate('/predict')}>Calculate Costs</button>
                             </div>
                         )}
                     </div>

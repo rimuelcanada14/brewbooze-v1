@@ -4,7 +4,8 @@ from flask_cors import CORS
 from models.mlr_model import predict_cost_breakdown, r2_score
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, resources={r"/*": {"origins": "*"}})  # Allow all origins
+
 
 @app.route('/predict', methods=['POST'])
 def predict():
