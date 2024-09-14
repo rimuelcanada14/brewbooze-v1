@@ -6,22 +6,21 @@ from models.mlr_model import predict_cost_breakdown, r2_score
 app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "*"}})  # Allow all origins
 
-
 @app.route('/predict', methods=['POST'])
 def predict():
     data = request.json
+    year = data.get('year')
     capital = data.get('capital')
-    inflation_rate = data.get('inflation_rate')
     
-    if capital is None or inflation_rate is None:
-        return jsonify({'error': 'Missing capital or inflation_rate'}), 400
+    if year is None or capital is None:
+        return jsonify({'error': 'Missing year or capital'}), 400
     
-    result = predict_cost_breakdown(capital, inflation_rate)
-    
-    # Include the R² score in the response
-    result['r2_score'] = r2_score
-    
-    return jsonify(result)
+    try:
+        result = predict_cost_breakdown(year, capital)
+        result['r2_score'] = r2_score
+        return jsonify(result)
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
 
 if __name__ == '__main__':
     app.run(debug=True)
