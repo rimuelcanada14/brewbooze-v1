@@ -45,22 +45,22 @@ def predict_cost_breakdown(year, capital):
     else :
         permits_val = 57964
 
-    # Adjust rent based on the year (assuming a 5% increase per year starting from the predicted value)
-    base_year = 2024  # Define the base year
+    # Define minimum rent values for each year
+    min_rent_by_year = {
+        2024: 24000,
+        2025: 24708,
+        2026: 25462,
+        2027: 26225,  # Example values, adjust as needed
+        2028: 27012   # Example values, adjust as needed
+    }
 
-    if year == 2025 : 
-        growth_rate = 0.0295
-    elif year == 2026 :
-        growth_rate = 0.03
-    elif year == 2027 :
-        growth_rate = 0.03
-    elif year == 2028 :
-        growth_rate = 0.03
-    else :
-        growth_rate = 0.03
-
-    year_difference = year - base_year
-    adjusted_rent = prediction[2] * (1 + growth_rate) ** year_difference
+    # Set the minimum rent based on the year
+    if year in min_rent_by_year:
+        adjusted_rent = max(prediction[2], min_rent_by_year[year])  # Ensure rent is at least the minimum for the year
+    else:
+        adjusted_rent = prediction[2]  # Use predicted rent if year not in the defined range
+        
+    
 
     breakdown = {
         'equipment': prediction[0],

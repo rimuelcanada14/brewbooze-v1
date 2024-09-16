@@ -71,6 +71,10 @@ input::-webkit-inner-spin-button {
 #predict-box {
     padding-left: 10px;
 }
+.modal-total {
+    margin-top: 1.4em;
+    font-weight: 600;
+}
 
 
 .modal {
@@ -84,10 +88,12 @@ input::-webkit-inner-spin-button {
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.5); /* Optional for overlay effect */
     z-index: 999; /* Ensures the modal stays above other elements */
+    
 }
 
 .modal-show {
     display: flex; /* Show the modal */
+    
 }
 
 .modal-content {
@@ -156,4 +162,7 @@ input::-webkit-inner-spin-button {
 }
 .modal-result {
     margin-bottom: .2em;;
+}
+.total-result {
+    margin-top: -1.1em;
 }

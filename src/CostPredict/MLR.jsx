@@ -7,6 +7,9 @@ import './Predict.css';
 const formatNumber = (number) => {
     return new Intl.NumberFormat('en-US', { style: 'decimal', minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(number);
 };
+const staffNumber = (number) => {
+    return new Intl.NumberFormat('en-US', { style: 'decimal', minimumFractionDigits: 0, maximumFractionDigits: 0 }).format(number);
+};
 
 const MLRForm = () => {
     const [capital, setCapital] = useState('');
@@ -28,6 +31,8 @@ const MLRForm = () => {
             
             const data = response.data;
             console.log('Response Data:', data);
+
+           
     
             if (data) {
                 const equipment = data.equipment || 0;
@@ -42,7 +47,29 @@ const MLRForm = () => {
                 const initialCost = equipment + renovation + permits;
                 const monthlyCost = ingredients + rent + utilities + staffIncome;
                 const totalCost = equipment + ingredients + rent + renovation + permits + utilities + staffIncome;
+                
+                const getMinIncome = (year) => {
+                    if (year == 2024) {
+                        return 19350;
+                    } else if (year == 2025) {
+                        return 19920.80;
+                    } else if (year == 2026) {
+                        return 20528.42;
+                    } else if (year == 2027) {
+                        return 21144.27;
+                    } else if (year == 2028) {
+                        return 21778.60;
+                    } else if (year == 2029) {
+                        return 22431.95;
+                    } else {
+                        return 19350;  // Default value in case year isn't specified
+                    }
+                };
+                
+                const min_income = getMinIncome(year);  // Call function to get min income for the year
+                const staffNumber = staffIncome / min_income;
                 const remainingCost = parseFloat(capital) - totalCost;
+                
 
                 setResult({
                     equipment,
@@ -56,6 +83,7 @@ const MLRForm = () => {
                     monthlyCost,
                     totalCost, // Add totalCost to result
                     remainingCost,
+                    staffNumber,
                     r2Score: data.r2_score, // Add r2_score to result if available
                 });
                 setShowModal(true); // Show the modal
@@ -88,6 +116,7 @@ const MLRForm = () => {
                             required 
                             className='predict-capital'
                             id="predict-box"
+                            min = '1200000'
                         />
                     </div>
                     <div className='predict-input2'>
@@ -145,11 +174,15 @@ const MLRForm = () => {
                                     <p className = "modal-result">₱{formatNumber(result.initialCost)}</p>
                                     <p className="modal-title">Monthly Cost:</p>
                                     <p className ="modal-monthly">₱{formatNumber(result.monthlyCost)}</p>
-                                    <br/><br/>
-                                    <p className="modal-title">Total Cost:</p>
-                                    <p className = "modal-result">₱{formatNumber(result.totalCost)}</p>
+                                    <p className="modal-title">Employees:</p>
+                                    <p className = "modal-result">{staffNumber(result.staffNumber)}</p>
+                                    <br/><br/><br/><br/><br/>
+                                    <p className="modal-total">Total Cost:</p>
+                                    <p className = "total-result">₱{formatNumber(result.totalCost)}</p>
                                     <p className="modal-title">Remaining:</p>
                                     <p className = "modal-result">₱{formatNumber(result.remainingCost)}</p>
+                                    
+                                    
                                     {/* <h3>R² Score: {result?.r2Score?.toFixed(4)}</h3> */}
                                 </div>
                             </div>
