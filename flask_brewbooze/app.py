@@ -1,7 +1,6 @@
-# backend/app.py
 from flask import Flask, request, jsonify
 from flask_cors import CORS
-from models.mlr_model import predict_cost_breakdown, r2_score
+from models.mlr_model import predict_cost_breakdown, get_r2_score
 
 app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "*"}})  # Allow all origins
@@ -17,7 +16,7 @@ def predict():
     
     try:
         result = predict_cost_breakdown(year, capital)
-        result['r2_score'] = r2_score
+        result['r2_score'] = get_r2_score()
         return jsonify(result)
     except Exception as e:
         return jsonify({'error': str(e)}), 500
