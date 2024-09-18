@@ -13,6 +13,9 @@ import CocktailRecommender from './Recommender/CocktailRecommender';
 
 import Predict from './CostPredict/MLR';
 
+// import About from './Misc/About';
+import Credits from './Misc/Credits';
+
 const App = () => {
     return (
         <Router>
@@ -29,6 +32,9 @@ const App = () => {
                 <Route path="recommend-cocktail" element={<CocktailRecommender />} />
 
                 <Route path="predict" element={<Predict />} />
+
+                {/* <Route path="about" element={<About />} /> */}
+                <Route path="credits" element={<Credits />} />
                 
             </Routes>
         </Router>
