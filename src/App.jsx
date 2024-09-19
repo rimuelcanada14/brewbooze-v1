@@ -13,7 +13,7 @@ import CocktailRecommender from './Recommender/CocktailRecommender';
 
 import Predict from './CostPredict/MLR';
 
-// import About from './Misc/About';
+import About from './Misc/About';
 import Credits from './Misc/Credits';
 
 const App = () => {
@@ -33,7 +33,7 @@ const App = () => {
 
                 <Route path="predict" element={<Predict />} />
 
-                {/* <Route path="about" element={<About />} /> */}
+                <Route path="about" element={<About />} />
                 <Route path="credits" element={<Credits />} />
                 
             </Routes>

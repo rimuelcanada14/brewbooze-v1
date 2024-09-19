@@ -1,5 +1,5 @@
 /* Credits.jsx */
-.credit-page {
+.misc-page {
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -7,7 +7,7 @@
     align-items: center;
     
 }
-.credit-container {
+.misc-container {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -22,6 +22,7 @@
 .credit-title {
     position: absolute;
     top: 10%;
+    color: #054243;
 }
 .dgc-image {
     height: auto;
@@ -70,14 +71,64 @@
     }
     .dgc-image {
         height: auto;
-        width: 12em;
-        margin-top: 10em;
+        width: 10em;
+        margin-top: 6em;
         padding: 0.4em;
     }
     .klook-image, .blender-image {
         height: auto;
-        width: 12em;
+        width: 10em;
         padding: 0.4em;
   }
 }
-
+.about-title {
+    position: absolute;
+    top: 10%;
+    color: #054243;
+}
+.about-pics {
+    display: flex;
+    flex-direction: row;
+    padding: 2em;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8em;
+}
+.about-deets {
+    background-color:#A38675;
+    color: white;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 20px;
+    text-align: center;
+    width: 20em;
+}
+.about-logo {
+    height: auto;
+    width: 25em;
+}
+@media only screen and (max-width: 790px) {
+    .about-title {
+        position: relative;
+        margin-top: 5em;
+        margin-bottom: -3em;
+        color: #054243;
+    }
+    .about-pics {
+        display: flex;
+        flex-direction: column;
+        padding: 2em;
+        justify-content: center;
+        align-items: center;
+        margin-top: 0em;
+    }
+    .about-deets {
+        width: 100%;
+        
+    }
+    .about-logo {
+        height: auto;
+        width: 15em;
+    }
+}
