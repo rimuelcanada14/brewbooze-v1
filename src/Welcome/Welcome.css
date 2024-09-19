@@ -14,13 +14,10 @@
 
 .welcome-slide {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     text-align: center;
-    background: transparent; /* Remove background */
-    border-radius: 0; /* Remove rounded corners */
-    box-shadow: none; /* Remove shadow */
 }
 
 .welcome-title {
@@ -176,4 +173,42 @@
     color: #A38675;
     z-index: 10;
     border: none;
+}
+
+@media only screen and (min-width: 988px) {
+    .welcome-slide {
+        flex-direction: row;
+        margin-top: -4em;
+        gap: 3em;
+    }
+    .simulate-text {
+        position: relative;
+        top: 3%;
+        width: 35em;
+    }
+    .logo-image {
+        width: auto;
+        height: 28em;
+        margin-top: 20%;
+        margin-bottom: -1.9em;  
+    }
+    .barista-image {
+        width: auto;
+        height: 37.5em;
+        margin-top: 15%;
+        margin-bottom: -1.7em;  
+    }
+    .flavor-image {
+        width: auto;
+        height: 30em;
+        margin-top: 15%;
+        margin-bottom: -1.7em;  
+    }
+    .business-image {
+        width: auto;
+        height: 28em;
+        margin-top: 15%;
+        margin-bottom: -1.9em;  
+    }
+    
 }

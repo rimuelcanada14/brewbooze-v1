@@ -170,7 +170,7 @@ const CoffeeRecommendation = () => {
               ) : (
                 <div>
                   <p className='question-number'>
-                    {currentQuestionIndex}/{questions.length}
+                    {currentQuestionIndex + 1}/{questions.length}
                   </p>
                   <p className='reco-questions'>{questions[currentQuestionIndex - 1]}</p>
                   <div className='answer-buttons'>

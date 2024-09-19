@@ -1,4 +1,3 @@
-/* Simulator.jsx */
 .choose-page {
     width: 100vw;
     height: 100vh;
@@ -75,68 +74,169 @@
     }
 }
 .bev {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
-    justify-content: center;
-    align-items:first  baseline;
-}
-.button-col{
     display: flex;
-    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
 }
-.bev-opts {
+
+.cocktail-page {
     display: flex;
     flex-direction: row;
-    width: 100%;
-    margin-bottom: 1em;
-    justify-content: center;
     align-items: center;
-    overflow: hidden;
 }
-.bev-container {
-    margin-top: 6em;
+.cocktail-container {
+    display: flex;
+    flex-direction: row;
+    
+}
+.cocktail-opts {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); 
+}
+
+.cocktail-button {
+    margin: .8em;
+}
+
+.cocktail-option {
+    background-color: #A38675;
+    color: white;
+    font-weight: 400;
+    border: none;
+    cursor: pointer;
     display: flex;
     flex-direction: column;
-    width: 100%;
-    justify-content: center;
     align-items: center;
-    overflow: hidden;
+    width: 9.5em;
+    height: 9.5em;
 }
-.bev-text{
-    position: absolute;
-    text-align: center;
-    margin-top: -0.9em;
-    margin-left: -1.45em;
-    font-size: 24px;
-    font-weight: 600; 
+
+.cocktail-image-opt {
     width: 8em;
+    height: auto;
 }
-.bev-text-break{
-    position: absolute;
+
+.cocktail-text {
+    font-size: 1.2rem;
     text-align: center;
-    margin-top: -2.4em;
-    margin-left: -1.55em;
-    font-size: 24px;
-    font-weight: 600; 
-    width: 8em;
+    position: absolute;
+    margin-top: 5.8em;
 }
-.bev-text-c{
-    position: absolute;
+.cocktail-text-a {
+    font-size: 1.2rem;
     text-align: center;
-    margin-top: -1.5em;
-    margin-left: -1.55em;
-    font-size: 24px;
-    font-weight: 600; 
-    width: 8em;
+    position: absolute;
+    margin-top: 4.4em;
 }
-.bev-text-c-break{
-    position: absolute;
-    text-align: center;
-    margin-top: -3em;
-    margin-left: -1.55em;
-    font-size: 24px;
-    font-weight: 600; 
+
+/* Responsive for tablets */
+@media screen and (max-width: 938px) {
+    .cocktail-opts {
+        grid-template-columns: repeat(4, 1fr); 
+        margin-top: 2em;
+    }
+
+    .cocktail-text {
+        font-size: 1.2rem;
+    }
+}
+
+/* Responsive for mobile devices */
+@media screen and (max-width: 792px) {
+    .cocktail-opts {
+        grid-template-columns: repeat(3, 1fr); 
+        margin-top: 10em;
+    }
+
+}
+@media screen and (max-width: 560px) {
+    .cocktail-opts {
+        grid-template-columns: repeat(2, 1fr); 
+        margin-top: 48em;
+    }
+    .cocktail-button {
+        margin: .4em;
+    }
+}
+
+.coffee-page {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.coffee-container {
+    display: flex;
+    flex-direction: row;
+    
+}
+.coffee-opts {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); 
+}
+
+.coffee-button {
+    margin: .8em;
+}
+
+.coffee-option {
+    background-color: #A38675;
+    color: white;
+    font-weight: 400;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 9.5em;
+    height: 9.5em;
+}
+
+.coffee-image-opt {
     width: 8em;
+    height: auto;
+}
+
+.coffee-text {
+    font-size: 1.2rem;
+    text-align: center;
+    position: absolute;
+    margin-top: 5.8em;
+}
+.coffee-text-a {
+    font-size: 1.2rem;
+    text-align: center;
+    position: absolute;
+    margin-top: 4.4em;
+}
+
+/* Responsive for tablets */
+@media screen and (max-width: 938px) {
+    .coffee-opts {
+        grid-template-columns: repeat(4, 1fr); 
+        margin-top: 2em;
+    }
+
+    .coffee-text {
+        font-size: 1.2rem;
+    }
+}
+
+/* Responsive for mobile devices */
+@media screen and (max-width: 792px) {
+    .coffee-opts {
+        grid-template-columns: repeat(3, 1fr); 
+        margin-top: 10em;
+    }
+
+}
+@media screen and (max-width: 560px) {
+    .coffee-opts {
+        grid-template-columns: repeat(2, 1fr); 
+        margin-top: 48em;
+    }
+    .coffee-button {
+        margin: .4em;
+    }
 }

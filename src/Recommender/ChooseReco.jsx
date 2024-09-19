@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from '../components/Header';
+import Footer from '../components/Footer';
 import { useNavigate } from 'react-router-dom';
 import './Recommender.css'
 
@@ -14,7 +15,7 @@ const Choose = () => {
             </div>
 
             <div className="choose-container">
-                <h1>CHOOSE YOUR<br/>BEVERAGE</h1>
+                <h1 className = 'choose-title'>CHOOSE YOUR<br/>BEVERAGE</h1>
                 <div className="choose-simu">
                     <div className='choose-button'>
                             <button className = 'choose-option' onClick={() => navigate('/recommend-coffee')}>
@@ -35,6 +36,7 @@ const Choose = () => {
                     </div>       
             </div>
         </div>
+        <Footer />
 
     
     </>

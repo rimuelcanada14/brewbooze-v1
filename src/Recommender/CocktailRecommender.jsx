@@ -154,7 +154,7 @@ const CoffeeRecommendation = () => {
         ) : (
           !showChatbot ? (
             <div className='reco-page'>
-              <h2 className='reco-title'>Coffee Flavor Recommender</h2>
+              <h2 className='reco-title'>Cocktail Flavor Recommender</h2>
               {currentQuestionIndex === 0 ? (
                 <div className='reco-input'>
                   <p className='reco-questions'>Please enter any allergies you have:</p>
@@ -170,7 +170,7 @@ const CoffeeRecommendation = () => {
               ) : (
                 <div>
                   <p className='question-number'>
-                    {currentQuestionIndex}/{questions.length}
+                    {currentQuestionIndex + 1}/{questions.length}
                   </p>
                   <p className='reco-questions'>{questions[currentQuestionIndex - 1]}</p>
                   <div className='answer-buttons'>
