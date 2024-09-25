@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@google/model-viewer": "^3.5.0",
     "@react-three/drei": "^9.113.0",
     "@react-three/fiber": "^8.17.7",
     "aframe": "^1.6.0",
@@ -26,8 +27,9 @@
     "react-slick": "^0.30.2",
     "slick-carousel": "^1.8.1",
     "swiper": "^11.1.14",
-    "three": "^0.168.0",
-    "three-stdlib": "^2.33.0"
+    "three": "^0.163.0",
+    "three-stdlib": "^2.33.0",
+    "three-usdz-loader": "^1.0.9"
   },
   "devDependencies": {
     "@eslint/js": "^9.9.0",

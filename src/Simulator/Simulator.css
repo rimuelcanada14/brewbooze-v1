@@ -248,6 +248,7 @@
     display: flex;
     justify-content: center; 
     align-items: center;
+    overflow: hidden;
     
 }
 .simu-container {
@@ -264,14 +265,21 @@
     font-size: 14px;
     color: #054243;
 }
-.simu-button {
-    position: fixed;
+.simu-buttons {
+    bottom: 2%;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
     z-index: 100;
-    bottom: 3%;
+    
+}
+.simu-button {
+    
     width: 90%;
     color: white;
     border: none;
-    background-color: #A38675;
+    background-color: #A5A58D;
     border-radius: 20px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
                 0 6px 20px 0 rgba(0, 0, 0, 0.19);

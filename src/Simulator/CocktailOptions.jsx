@@ -15,7 +15,7 @@ const CocktailOptions = () => {
                 <div className='cocktail-container'>
                     <div className='cocktail-opts'>
                         <div className='cocktail-button'>
-                            <button className='cocktail-option'>
+                            <button className='cocktail-option'  onClick={() => navigate('/gin-pomelo')}>
                                 <div>
                                     <img src='./Cocktail.png' alt='Flavor' className='cocktail-image-opt' />
                                 </div>
