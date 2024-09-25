@@ -3,7 +3,6 @@ import { useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import './Home.css';
-
 const Home = () => {
     const [activeIndex, setActiveIndex] = useState(null);
     const navigate = useNavigate();

@@ -240,3 +240,43 @@
         margin: .4em;
     }
 }
+
+
+.simu-page {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    
+}
+.simu-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.simu-title {
+    position: absolute;
+    top: 10%;
+    font-size: 14px;
+    color: #054243;
+}
+.simu-button {
+    position: fixed;
+    z-index: 100;
+    bottom: 3%;
+    width: 90%;
+    color: white;
+    border: none;
+    background-color: #A38675;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+                0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding-right: .5em;
+    margin-left: .5em;
+    margin-right: .5em;
+    font-weight: 400;
+}

@@ -1,8 +1,10 @@
 import React from 'react';
 import Header from '../components/Header';
 import './Simulator.css';
+import { useNavigate } from 'react-router-dom';
 
 const CocktailOptions = () => {
+    const navigate = useNavigate();
     return (
         <div className='cocktail-page'>
             <div>
@@ -20,7 +22,7 @@ const CocktailOptions = () => {
                                 <h2 className='cocktail-text'>GIN POM</h2>
                             </button>
                         </div>
-                        <div className='cocktail-button'>
+                        <div className='cocktail-button' onClick={() => navigate('/wengweng')}>
                             <button className='cocktail-option'>
                                 <div>
                                     <img src='./Cocktail.png' alt='Flavor' className='cocktail-image-opt' />

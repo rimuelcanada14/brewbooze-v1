@@ -7,6 +7,8 @@ import ChooseSimulator from './Simulator/ChooseSimulator';
 import CoffeeOptions from './Simulator/CoffeeOptions';
 import CocktailOptions from './Simulator/CocktailOptions';
 
+import WengWeng from './Simulator/WengWeng';
+
 import ChooseRecommender from './Recommender/ChooseReco';
 import CoffeeRecommender from './Recommender/CoffeeRecommender';
 import CocktailRecommender from './Recommender/CocktailRecommender';
@@ -26,6 +28,8 @@ const App = () => {
                 <Route path="choose-simulator" element={<ChooseSimulator />} />
                 <Route path="coffee-opt" element={<CoffeeOptions />} />
                 <Route path="cocktail-opt" element={<CocktailOptions />} />
+
+                <Route path="wengweng" element={<WengWeng />} />
 
                 <Route path="choose-recommender" element={<ChooseRecommender />} />
                 <Route path="recommend-coffee" element={<CoffeeRecommender />} />
