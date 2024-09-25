@@ -7,11 +7,12 @@ import Basil from '../3DModels/Basil';
 import GinPomelo3D from '../3DModels/GinPomelo'; // Renaming to avoid conflict with component name
 import IceFalling from '../3DModels/IceFalling';
 import PomeloFall from '../3DModels/PomeloFall';
+import GinLiq from '../3DModels/GinLiq';
 import Shake from '../3DModels/Shake';
 
 const GinPomelo = () => {
     // Array to store the sequence of models
-    const models = [IceFalling, PomeloFall, Basil, Shake, GinPomelo3D];
+    const models = [IceFalling, PomeloFall, Basil, GinLiq, Shake, GinPomelo3D];
 
     const [currentModelIndex, setCurrentModelIndex] = useState(0); // Initial state to show the first model
 
