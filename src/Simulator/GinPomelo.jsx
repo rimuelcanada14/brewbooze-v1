@@ -11,16 +11,16 @@ import Shake from '../3DModels/Shake';
 
 const GinPomelo = () => {
     // Array to store the sequence of models
-    const models = [IceFalling, PomeloFall, Basil, GinLiq, Shake, GinPomelo3D];
+    const models = [PomeloFall, Basil, GinLiq, Shake, IceFalling, GinPomelo3D];
 
     // Array to store descriptions for each model
     const descriptions = [
-        '1. Ice cubes falling into the glass.',
-        '2. Fresh pomelo slices falling into the drink.',
-        '3. Basil leaves added for extra flavor.',
-        '4. Gin liquor being poured into the mix.',
-        '5. Shaking the drink to perfection.',
-        '6. The final Gin Pomelo drink ready to serve.'
+        '1. Put fresh pomelo slices to add the natural flavor.',
+        '2. Putting basil leaves is optional; adds a strong flavor to the drink.',
+        '3. Gin Pomelo is not called by its name without Gin Bilog. At least 30ml will do. Your choice.',
+        '4. Shake the drink to perfection to evely distribute the flavor.',
+        '5. Put some ice to the drink to refresh your spirit.',
+        '6. The Gin Pomelo drink ready to serve.'
     ];
 
     const [currentModelIndex, setCurrentModelIndex] = useState(0); // Initial state to show the first model
@@ -53,6 +53,7 @@ const GinPomelo = () => {
 
                     <div className="simu-3d">
                         <div className='simu-des'>
+                            <h1 className = 'simu-step'>STEPS TO FOLLOW:</h1>
                             {currentDescription}
                         </div>
                         <div className = "simu-model">

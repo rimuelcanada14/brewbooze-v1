@@ -17,12 +17,12 @@ const CocktailOptions = () => {
                         <div className='cocktail-button'>
                             <button className='cocktail-option'  onClick={() => navigate('/gin-pomelo')}>
                                 <div>
-                                    <img src='./Cocktail.png' alt='Flavor' className='cocktail-image-opt' />
+                                    <img src='./GinPomelo.png' alt='Flavor' className='cocktail-gin' />
                                 </div>
                                 <h2 className='cocktail-text'>GIN POM</h2>
                             </button>
                         </div>
-                        <div className='cocktail-button' onClick={() => navigate('/wengweng')}>
+                        <div className='cocktail-button'>
                             <button className='cocktail-option'>
                                 <div>
                                     <img src='./Cocktail.png' alt='Flavor' className='cocktail-image-opt' />
@@ -55,9 +55,9 @@ const CocktailOptions = () => {
                             </button>
                         </div>
                         <div className='cocktail-button'>
-                            <button className='cocktail-option'>
+                            <button className='cocktail-option'  onClick={() => navigate('/rpg')}>
                                 <div>
-                                    <img src='./Cocktail.png' alt='Flavor' className='cocktail-image-opt' />
+                                    <img src='./RPG.png' alt='Flavor' className='cocktail-rpg' />
                                 </div>
                                 <h2 className='cocktail-text'>RPG</h2>
                             </button>

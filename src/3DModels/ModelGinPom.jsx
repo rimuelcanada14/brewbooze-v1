@@ -3,7 +3,7 @@ import { Canvas } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
 import ModelBuilder from './ModelBuilder.jsx';
 
-const Shake = () => {
+const ModelGinPom = () => {
   return (
     <div className="loc-modal-content">
         <Canvas
@@ -27,4 +27,4 @@ const Shake = () => {
   );
 };
 
-export default Shake;
+export default ModelGinPom;
