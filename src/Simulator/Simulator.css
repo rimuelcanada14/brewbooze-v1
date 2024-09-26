@@ -265,6 +265,26 @@
     font-size: 14px;
     color: #054243;
 }
+.simu-3d {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    
+}
+.simu-des {
+    z-index: 1000;
+    bottom: 20%;
+    background-color: rgba(163, 134, 117, .7);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+                0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 20px;
+    border-radius: 20px;
+    color: white;
+    width: 100%;
+    margin-left: 2em;
+}
 .simu-buttons {
     bottom: 2%;
     position: absolute;
@@ -272,7 +292,6 @@
     flex-direction: row;
     width: 100%;
     z-index: 100;
-    
 }
 .simu-button {
     
@@ -288,3 +307,62 @@
     margin-right: .5em;
     font-weight: 400;
 }
+
+@media screen and (max-width: 560px) {
+    .simu-3d {
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .simu-des {
+        position: absolute;
+        z-index: 1000;
+        bottom: 20%;
+        background-color: rgba(163, 134, 117, .7);
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+                    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        padding: 20px;
+        border-radius: 20px;
+        color: white;
+        width: 80%;
+        margin-left: 0em;
+    }
+    
+}
+
+
+.loc-modal-content, .loc-modal-basil, .loc-modal-gin, .loc-modal-shake {
+    height: 100vh;
+    width: 30vw;
+    z-index: 1;
+    margin-top: 9em;
+  }
+  
+  @media (max-width: 768px) {
+    .loc-modal-content {
+      width: 90vw; /* Adjust canvas width for mobile */
+      margin-top: 5em; /* Adjust margin for mobile */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .loc-modal-content {
+      width: 100vw;
+      margin-top: 2em;
+    }
+    .loc-modal-basil {
+        margin-top: 5em;
+        width: 100vw;
+    }
+    .loc-modal-gin {
+        margin-top: 7em;
+        width: 100vw;
+    }
+    .loc-modal-shake {
+        margin-top: 7em;
+        width: 100vw;
+    }
+  }  
