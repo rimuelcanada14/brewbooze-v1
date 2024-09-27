@@ -8,7 +8,11 @@ import CoffeeOptions from './Simulator/CoffeeOptions';
 import CocktailOptions from './Simulator/CocktailOptions';
 
 import GinPomelo from './Simulator/GinPomelo';
+import Shembot from './Simulator/Shembot';
+import TiaMaria from './Simulator/TiaMaria';
 import RPG from './Simulator/RPG';
+
+import Arabica from './Simulator/Arabica';
 
 import ChooseRecommender from './Recommender/ChooseReco';
 import CoffeeRecommender from './Recommender/CoffeeRecommender';
@@ -31,7 +35,11 @@ const App = () => {
                 <Route path="cocktail-opt" element={<CocktailOptions />} />
 
                 <Route path="gin-pomelo" element={<GinPomelo />} />
+                <Route path="shembot" element={<Shembot />} />
                 <Route path="rpg" element={<RPG />} />
+                <Route path="tia-maria" element={<TiaMaria />} />
+
+                <Route path="arabica" element={<Arabica />} />
 
                 <Route path="choose-recommender" element={<ChooseRecommender />} />
                 <Route path="recommend-coffee" element={<CoffeeRecommender />} />

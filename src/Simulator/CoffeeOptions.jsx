@@ -1,8 +1,10 @@
 import React from 'react';
 import Header from '../components/Header';
 import './Simulator.css';
+import { useNavigate } from 'react-router-dom';
 
 const coffeeOptions = () => {
+    const navigate = useNavigate();
     return (
         <div className='coffee-page'>
             <div>
@@ -13,9 +15,9 @@ const coffeeOptions = () => {
                 <div className='coffee-container'>
                     <div className='coffee-opts'>
                         <div className='coffee-button'>
-                            <button className = 'coffee-option'>
+                            <button className = 'coffee-option' onClick={() => navigate('/arabica')}>
                                 <div>
-                                    <img src='./Coffee.png' alt='Flavor' className='coffee-image-opt' />
+                                    <img src='./Arabica.png' alt='Flavor' className='coffee-ara' />
                                 </div>
                                 <h2 className = 'coffee-text'>ARABICA</h2>
                             </button>

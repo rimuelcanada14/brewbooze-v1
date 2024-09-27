@@ -31,9 +31,9 @@ const CocktailOptions = () => {
                             </button>
                         </div>
                         <div className='cocktail-button'>
-                            <button className='cocktail-option'>
+                            <button className='cocktail-option' onClick={() => navigate('/shembot')}>
                                 <div>
-                                    <img src='./Cocktail.png' alt='Flavor' className='cocktail-image-opt' />
+                                    <img src='./Shembot.png' alt='Flavor' className='cocktail-rpg' />
                                 </div>
                                 <h2 className='cocktail-text'>SHEMBOT</h2>
                             </button>
@@ -79,9 +79,9 @@ const CocktailOptions = () => {
                             </button>
                         </div>
                         <div className='cocktail-button'>
-                            <button className='cocktail-option'>
+                            <button className='cocktail-option' onClick={() => navigate('/tia-maria')}>
                                 <div>
-                                    <img src='./Cocktail.png' alt='Flavor' className='cocktail-image-opt' />
+                                    <img src='./TiaMaria.png' alt='Flavor' className='cocktail-rpg' />
                                 </div>
                                 <h2 className='cocktail-text-a'>TIA MARIA'S<br/>ZOMBIE</h2>
                             </button>
