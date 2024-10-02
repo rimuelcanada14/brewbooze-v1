@@ -1,6 +1,6 @@
-from flask import Flask, send_from_directory
+from flask import Flask, request, jsonify, send_from_directory
 from flask_cors import CORS
-from backend.models.mlr_model import predict_cost_breakdown, get_r2_score
+from models.mlr_model import predict_cost_breakdown, get_r2_score
 import os
 
 app = Flask(__name__, static_folder="../frontend/dist")
