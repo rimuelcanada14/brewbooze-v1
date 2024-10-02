@@ -1,9 +1,10 @@
-from flask import Flask, request, jsonify
+from flask import Flask, send_from_directory
 from flask_cors import CORS
 from models.mlr_model import predict_cost_breakdown, get_r2_score
+import os
 
-app = Flask(__name__)
-CORS(app, resources={r"/*": {"origins": "*"}})  # Allow all origins
+app = Flask(__name__, static_folder="../frontend/dist")
+CORS(app, resources={r"/*": {"origins": "*"}})
 
 @app.route('/predict', methods=['POST'])
 def predict():
@@ -20,6 +21,15 @@ def predict():
         return jsonify(result)
     except Exception as e:
         return jsonify({'error': str(e)}), 500
+
+# Serve static files (frontend)
+@app.route('/', defaults={'path': ''})
+@app.route('/<path:path>')
+def serve_frontend(path):
+    if path != "" and os.path.exists(os.path.join(app.static_folder, path)):
+        return send_from_directory(app.static_folder, path)
+    else:
+        return send_from_directory(app.static_folder, 'index.html')
 
 if __name__ == '__main__':
     app.run()
