@@ -12,7 +12,7 @@ const ModelBuilder = ({ path, animationSpeed = 1, ...props }) => {
       mixer.current = new THREE.AnimationMixer(scene);
       animations.forEach((clip) => {
         const action = mixer.current.clipAction(clip);
-        action.setEffectiveTimeScale(animationSpeed); // Set animation speed
+        action.setEffectiveTimeScale(animationSpeed);
         action.play();
       });
     }

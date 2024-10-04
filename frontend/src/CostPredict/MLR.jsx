@@ -19,9 +19,9 @@ const MLRForm = () => {
     const [showModal, setShowModal] = useState(false);
 
     const handleSubmit = async (e) => {
-        e.preventDefault(); // Prevent the default form submission behavior
-        setError(''); // Reset any previous error
-        setResult(null); // Reset previous result
+        e.preventDefault();
+        setError(''); 
+        setResult(null);
 
         try {
             const response = await axios.post('http://127.0.0.1:5000/predict', {
@@ -62,11 +62,11 @@ const MLRForm = () => {
                     } else if (year == 2029) {
                         return 22431.95;
                     } else {
-                        return 19350;  // Default value in case year isn't specified
+                        return 19350; 
                     }
                 };
                 
-                const min_income = getMinIncome(year);  // Call function to get min income for the year
+                const min_income = getMinIncome(year); 
                 const staffNumber = staffIncome / min_income;
                 const remainingCost = parseFloat(capital) - totalCost;
                 
@@ -81,12 +81,12 @@ const MLRForm = () => {
                     staffIncome,
                     initialCost,
                     monthlyCost,
-                    totalCost, // Add totalCost to result
+                    totalCost,
                     remainingCost,
                     staffNumber,
-                    r2Score: data.r2_score, // Add r2_score to result if available
+                    r2Score: data.r2_score, 
                 });
-                setShowModal(true); // Show the modal
+                setShowModal(true);
             }
         } catch (error) {
             console.error('Error:', error);
@@ -95,7 +95,7 @@ const MLRForm = () => {
     };
 
     const closeModal = () => {
-        setShowModal(false); // Hide the modal
+        setShowModal(false);
     };
 
     return (
@@ -181,9 +181,6 @@ const MLRForm = () => {
                                     <p className = "total-result">₱{formatNumber(result.totalCost)}</p>
                                     <p className="modal-title">Remaining:</p>
                                     <p className = "modal-result">₱{formatNumber(result.remainingCost)}</p>
-                                    
-                                    
-                                    {/* <h3>R² Score: {result?.r2Score?.toFixed(4)}</h3> */}
                                 </div>
                             </div>
                         )}

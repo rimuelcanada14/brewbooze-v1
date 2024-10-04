@@ -4,16 +4,16 @@ import './Simulator.css';
 
 import Grinder from '../3DModels/Grinder';
 import CoffeeGrounds from '../3DModels/CoffeeGrounds';
-import Arabica3D from '../3DModels/ModelArabica'; 
+import Flavor3D from '../3DModels/ModelFlavor'; 
 import Water from '../3DModels/Water';
 
-const Arabica = () => {
-    const models = [Grinder, CoffeeGrounds, Water, Arabica3D];
+const Flavor = () => {
+    const models = [Grinder, CoffeeGrounds, Water, Flavor3D];
     const descriptions = [
-        '1. Grind the Arabica coffee beans to turn it into grounds.',
+        '1. Grind the Flavor coffee beans to turn it into grounds.',
         '2. Put the ground coffee in a cup. At least 2 tablespoons will do.',
         '3. Mix the the coffee grounds with water. Two tablespoons of grounds = 175ml of water.',
-        '4. The Arabica coffee is ready to serve.'
+        '4. The Flavor coffee is ready to serve.'
     ];
     const [currentModelIndex, setCurrentModelIndex] = useState(0); 
 
@@ -36,7 +36,7 @@ const Arabica = () => {
 
                 <div className="simu-container">
                     <div className='simu-title'>
-                        <h1>ARABICA</h1>
+                        <h1>Flavor</h1>
                     </div>
 
                     <div className="simu-3d">
@@ -64,4 +64,4 @@ const Arabica = () => {
     );
 };
 
-export default Arabica;
+export default Flavor;

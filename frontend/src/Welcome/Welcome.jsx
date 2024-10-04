@@ -16,16 +16,16 @@ const Welcome = () => {
         if (swiperRef.current && swiperRef.current.swiper) {
             const swiper = swiperRef.current.swiper;
             if (swiper.activeIndex === swiper.slides.length - 1) {
-                navigate('/home'); // Navigate to home on last slide
+                navigate('/home');
             } else {
-                swiper.slideNext(); // Move to the next slide
+                swiper.slideNext(); 
             }
         }
     };
     
     const handlePrev = () => {
         if (swiperRef.current && swiperRef.current.swiper) {
-            swiperRef.current.swiper.slidePrev(); // Move to the previous slide
+            swiperRef.current.swiper.slidePrev(); 
         }
     };
     
@@ -33,7 +33,7 @@ const Welcome = () => {
     const handleSkip = () => {
         if (swiperRef.current && swiperRef.current.swiper) {
             const total = swiperRef.current.swiper.slides.length;
-            swiperRef.current.swiper.slideTo(total - 1); // Skip to last slide
+            swiperRef.current.swiper.slideTo(total - 1);
         }
     };
 
@@ -63,11 +63,11 @@ const Welcome = () => {
                 ref={swiperRef}
                 spaceBetween={0}
                 slidesPerView={1}
-                pagination={{ clickable: true }} // Enable clickable pagination
-                allowTouchMove={false} // Disables swipe gestures
+                pagination={{ clickable: true }} 
+                allowTouchMove={false} 
                 className='swiper-container'
                 onSlideChange={onSlideChange}
-                onInit={onSlideChange} // Initialize slide state
+                onInit={onSlideChange}
             >
                 <SwiperSlide className='welcome-slide'>
                     <div className='simulate-text'>
@@ -127,7 +127,7 @@ const Welcome = () => {
                 </SwiperSlide>
             </Swiper>
 
-            {/* Fixed Button Container */}
+           
             <div className='button-container'>
                 {currentSlide > 1 && (
                     <button onClick={handlePrev} className='back-button'>Back</button>
@@ -140,7 +140,6 @@ const Welcome = () => {
                 </button>
             </div>
 
-            {/* Slide Number Indicator */}
             <div className='slide-number'>
                 {currentSlide}/{totalSlides}
             </div>

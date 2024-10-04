@@ -80,7 +80,7 @@ const CoffeeRecommendation = () => {
             "messages": [
               {
                 "role": "system",
-                "content": "Recommend a coffee flavor from these options: (Arabica, Robusta, Liberica, Excelsa, Black, Americano, Latte, Cappuccino, Espresso Shots, Doppio, Macchiato, Mocha, Flat White, Ristretto, Affogato, Iced Coffee, Iced Espresso, Cold Brew, Frappuccino). Only provide in the statement: 'The recommended coffee flavor for your preferences is: ' and provide its ingredients. Also state that the ingredient they are allergic to is present or not. If that ingredient is present, DO NOT RECOMMEND A FLAVOR and recommend another that is close to the answers to the questions."
+                "content": "Recommend a coffee flavor from these options: (Arabica, Robusta, Liberica, Excelsa, Black, Americano, Latte, Cappuccino, Espresso Shots, Doppio, Macchiato, Mocha, Flat White, Ristretto, Affogato, Iced Coffee). Only provide in the statement: 'The recommended coffee flavor for your preferences is: ' and provide its ingredients. Also state that the ingredient they are allergic to is present or not. If that ingredient is present, DO NOT RECOMMEND A FLAVOR and recommend another that is close to the answers to the questions."
               },
               {
                 "role": "user",
