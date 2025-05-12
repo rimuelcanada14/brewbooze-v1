@@ -15,7 +15,7 @@ const CocktailOptions = () => {
                 <div className='cocktail-container'>
                     <div className='cocktail-opts'>
                         <div className='cocktail-button'>
-                            <button className='cocktail-option'  onClick={() => navigate('/gin-pomelo')}>
+                            <button className='cocktail-option' onClick={() => navigate('/gin-pomelo')}>
                                 <div>
                                     <img src='./GinPomelo.png' alt='Flavor' className='cocktail-gin' />
                                 </div>
@@ -55,7 +55,7 @@ const CocktailOptions = () => {
                             </button>
                         </div>
                         <div className='cocktail-button'>
-                            <button className='cocktail-option'  onClick={() => navigate('/rpg')}>
+                            <button className='cocktail-option' onClick={() => navigate('/rpg')}>
                                 <div>
                                     <img src='./RPG.png' alt='Flavor' className='cocktail-rpg' />
                                 </div>
@@ -83,7 +83,7 @@ const CocktailOptions = () => {
                                 <div>
                                     <img src='./TiaMaria.png' alt='Flavor' className='cocktail-rpg' />
                                 </div>
-                                <h2 className='cocktail-text-a'>TIA MARIA'S<br/>ZOMBIE</h2>
+                                <h2 className='cocktail-text-a'>TIA MARIA'S<br />ZOMBIE</h2>
                             </button>
                         </div>
                         <div className='cocktail-button'>
@@ -103,7 +103,7 @@ const CocktailOptions = () => {
                             </button>
                         </div>
                         <div className='cocktail-button'>
-                            <button className='cocktail-option'>
+                            <                   button className='cocktail-option'>
                                 <div>
                                     <img src='./Cocktail.png' alt='Flavor' className='cocktail-image-opt' />
                                 </div>
@@ -139,8 +139,8 @@ const CocktailOptions = () => {
                 </div>
             </div>
         </div>
-        
+
     );
 };
-
 export default CocktailOptions;
+

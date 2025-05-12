@@ -141,5 +141,4 @@ const coffeeOptions = () => {
         </div>
     );
 };
-
 export default coffeeOptions;
